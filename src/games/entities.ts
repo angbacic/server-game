@@ -45,8 +45,8 @@ export class Player extends BaseEntity {
   @ManyToOne(_ => Game, game => game.players)
   game: Game;
 
-  // @Column("integer", { name: "user_id" })
-  // userId: number;
+  @Column("integer", { name: "user_id" })
+  userId: number;
 
   @ManyToMany(() => Word, { eager: true })
   @JoinTable()
